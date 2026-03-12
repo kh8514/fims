@@ -6,6 +6,12 @@ spring:
     name: gateway
   cloud:
     gateway:
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global Filter
+            preLogger: true
+            postLogger: true
       routes:
         - id: user-service
           uri: lb://user-service
@@ -13,6 +19,8 @@ spring:
           - Path=/api/users/**
           filters:
           - StripPrefix=1
+          - CustomFilter
+
 
 eureka:
   client:
