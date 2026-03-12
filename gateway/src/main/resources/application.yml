@@ -19,8 +19,12 @@ spring:
           - Path=/api/users/**
           filters:
           - StripPrefix=1
-          - CustomFilter
-
+          - name: CustomFilter
+          - name: LoggingFilter
+            args:
+              baseMessage: Hi, there
+              preLogger: true
+              postLogger: true
 
 eureka:
   client:
