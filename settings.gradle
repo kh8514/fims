@@ -1,0 +1,6 @@
+rootProject.name = 'fims'
+
+include 'common'
+include 'discovery'
+include 'gateway'
+include 'user-service'

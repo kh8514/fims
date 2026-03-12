@@ -1,0 +1,12 @@
+
+dependencies {
+    // Gateway (WebFlux 기반 - reactive)
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+
+    // Eureka Client 등록
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    // 로드밸런싱 라우팅
+    implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
+}
+
